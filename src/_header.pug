@@ -1,0 +1,13 @@
+header
+  block header
+    .inner
+      .logo
+        a(href=rp): img(src=rp+"img/logo.png", alt="ロゴ")
+      .address
+        .tel
+          a(href="tel:00-0000-0000") 00-0000-0000
+          p 日祝休み
+      nav
+        ul
+          each val, index in pages
+            li: a(href="#") #{val.title}

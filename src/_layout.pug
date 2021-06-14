@@ -1,0 +1,68 @@
+block vars
+  -
+    siteTitle = "ほげほげプロジェクト"
+    descri = "デスクリデスクリ"
+    keywords = "キーワード,キーワード２"
+  -
+    pages = {
+      "index": {
+        url: "index",
+        parent: "",
+        title: "TOPページ",
+        layer: 1,
+      },
+      "company": {
+        url: "company",
+        parent: "index",
+        title: "会社案内",
+        layer: 2,
+      }
+    }
+if layer <= 1
+  -var rp = "./"
+else
+  -var rp = "../".repeat(layer - 1)
+if pageTitle != ""
+  -siteTitle = pageTitle + " - " + siteTitle
+
+doctype html
+html(prefix='og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#', lang="ja")
+  head
+    //- meta系
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title #{siteTitle}
+    meta(name="description", content=descri)
+    meta(name="keywords", content=keywords)
+    //- GA,GTMタグ
+    include _gaTag
+    //- viewport
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    //- block viewport
+      script(src="js/viewport.min.js")
+    //- link
+    link(rel="stylesheet", href="css/style.min.css")
+    link(rel='shortcut icon', href='img/favicon.ico', type='image/x-icon')
+    //- OGPタグ
+    include _ogpTag
+  body(class="page-" + pageSlug)
+    include _header
+    main
+      if pageSlug !== "index"
+        section.under-mv
+          img(src="img/bg-"+pageSlug+".jpg", alt="")
+          h1: span=pageSlug
+            br
+            span #{pages.pageSlug.title}
+      block main
+        section.1tume １つめ
+        section.2tume ２つめ
+        section.3tume ３つめ
+    include _footer
+    block footer_script
+      //- jquery3系
+      script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+      //- modaal
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js")
+      //- カスタムjs
+      script(src="js/main.min.js")
