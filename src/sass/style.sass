@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=ABeeZee|Noto+Sans+JP');
 
 // 変数欄。変数名と値はプロジェクトに合わせて変える。
-$main: #0000e0
+$main: #27217c
 $text: #333
 $bg: #fffaf3
 $bg-footer: #dcdcdc
@@ -11,11 +11,11 @@ $font: "Noto Sans JP", "游ゴシック", "Yu Gothic", YuGothic, "游ゴシッ�
 
 // 初期設定的な。
 =sp
-  @media screen and (max-width: 959px)
+  @media screen and (max-width: 559px)
     @content
 
 =not-sp
-  @media screen and (min-width: 960px)
+  @media screen and (min-width: 560px)
     @content
 
 =ie
@@ -110,7 +110,8 @@ img
 
 .inner
   margin: 0 auto
-  width: 1000px
+  max-width: 1000px
+  width: 100%
   padding: 0 20px
   +sp
     width: auto
@@ -121,16 +122,34 @@ img
 // レイアウト
 header
   padding: 20px 0
+  .inner
+    display: flex
   .logo
     width: 200px
     img
       width: 100%
+  nav
+    margin-left: auto
+    ul
+      display: flex
 
 footer
+  background: $main
+  color: #fff
+  padding: 40px 0 60px
+  .logo
+    width: 100px
+    img
+      width: 100%
+  a
+    color: #fff
 
 main
   display: block//IEバグ用
-
+  overflow: hidden
+  section
+  h1
+    font-size: 36px
 
 
 

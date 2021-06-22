@@ -4,20 +4,38 @@ block vars
     descri = "デスクリデスクリ"
     keywords = "キーワード,キーワード２"
   -
-    pages = {
-      "index": {
-        url: "index",
-        parent: "",
-        title: "TOPページ",
-        layer: 1,
-      },
-      "company": {
+    pages = [
+      {
         url: "company",
         parent: "index",
-        title: "会社案内",
+        title: "楽しい仲間",
+        layer: 2,
+      },
+      {
+        url: "",
+        parent: "index",
+        title: "営業案内・料金",
+        layer: 2,
+      },
+      {
+        url: "",
+        parent: "index",
+        title: "アクセス",
+        layer: 2,
+      },
+      {
+        url: "",
+        parent: "index",
+        title: "フロア",
+        layer: 2,
+      },
+      {
+        url: "",
+        parent: "index",
+        title: "SDGsの取り組み",
         layer: 2,
       }
-    }
+    ]
 if layer <= 1
   -var rp = "./"
 else
