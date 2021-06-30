@@ -24,6 +24,7 @@ https://github.com/sudo-roa/sudo-roa.github.io/blob/main/hoshi_project/README.md
 
 ## その他メモ
 
+所在地：
 https://www.google.com/maps/place/%E9%87%91%E6%B4%A5%E5%89%B5%E4%BD%9C%E3%81%AE%E6%A3%AE%E7%BE%8E%E8%A1%93%E9%A4%A8/@36.2245557,136.2298907,13z/data=!4m13!1m7!3m6!1s0x5ff8efd2ba2fe767:0xaccfd83b4273bac5!2z56aP5LqV55yM44GC44KP44KJ5biC!3b1!8m2!3d36.211396!4d136.2290374!3m4!1s0x5ff8ee257040ba1d:0xa2d289c20734d821!8m2!3d36.2305022!4d136.2614073
 
 必須事項

@@ -1,8 +1,7 @@
 block vars
   -
-    siteTitle = "ほげほげプロジェクト"
-    descri = "デスクリデスクリ"
-    keywords = "キーワード,キーワード２"
+    siteTitle = "星駆水族館｜くらげが有名な水族館"
+    descri = "くらげが有名な水族館のサイトです。石川にあります。"
   -
     pages = [
       {
@@ -59,8 +58,18 @@ html(prefix='og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.
     //- block viewport
       script(src="js/viewport.min.js")
     //- link
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Kosugi+Maru&family=RocknRoll+One&display=swap", rel="stylesheet")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer")
     link(rel="stylesheet", href="css/style.min.css")
     link(rel='shortcut icon', href='img/favicon.ico', type='image/x-icon')
+    //- JS系
+    script(src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js" integrity="sha512-2fk3Q4NXPYAqIha0glLZ2nluueK43aNoxvijPf53+DgL7UW9mkN+uXc1aEmnZdkkZVvtJZltpRt+JqTWc3TS3Q==" crossorigin="anonymous" referrerpolicy="no-referrer")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer")
+    script(src="js/main.min.js")
+    
     //- OGPタグ
     include _ogpTag
   body(class="page-" + pageSlug)
@@ -79,8 +88,7 @@ html(prefix='og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.
     include _footer
     block footer_script
       //- jquery3系
-      script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+      //- script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
       //- modaal
-      script(src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js")
+      //- script(src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js")
       //- カスタムjs
-      script(src="js/main.min.js")
