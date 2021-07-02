@@ -3,8 +3,10 @@
 
 // 変数欄。変数名と値はプロジェクトに合わせて変える。
 $main: #173061
+$sub: #369dec
 $text: #000
-$bg: #fffaf3
+$bg: #b6dfff
+$bg2: #cbe7fd
 $bg-footer: #dcdcdc
 
 $font: 'Kosugi Maru', "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif
@@ -167,8 +169,24 @@ main
   section
     padding: 60px 0 100px
   h1
+    margin-bottom: 40px
     font-size: 36px
-    border-bottom: 4px solid $main
+    // border-bottom: 4px solid $main
+    font-family: $midasi
+    text-align: center
+    position: relative
+    &::after
+      content: ""
+      position: absolute
+      top: 100%
+      left: 50%
+      width: 76px
+      height: 14px
+      background: url("../img/img_h_under.png") no-repeat top left / cover
+      transform: translateX(-50%)
+  h2
+    margin: 16px 0 8px
+    font-size: 28px
     font-family: $midasi
 
 .mv
@@ -203,8 +221,6 @@ main
 
 .oshirase
   padding-top: 40px
-  h1
-    border-bottom: none
   .oshirase_list
     padding: 10px 0
     ul
@@ -218,9 +234,10 @@ main
         width: 100%
 
 .campaign
-  background: #b6dfff
+  background: $bg
   position: relative
   padding-top: 70px
+  margin: 40px 0
   &::before, &::after
     content: ""
     position: absolute
@@ -233,10 +250,7 @@ main
     top: 100%
     transform: rotate(180deg)
     // background-position: top left
-  h1
-    border-bottom: none
-    text-align: center
-  .campaign_box
+  .campaign_wrap
     display: flex
 
   .campaign_left
@@ -245,3 +259,42 @@ main
     width: 40%
     img
       width: 100%
+
+.opening
+  h2
+    // &::before
+      // content: "★"
+      // color: $sub
+  .opening_wrap
+    display: flex
+    justify-content: space-between
+  .opening_left
+    width: calc(50% - 10px)
+    p
+      font-size: 22px
+      font-weight: bold
+      line-height: 1.8
+  .opening_right
+    width: calc(50% - 10px)
+  .opening_table
+    width: 100%
+    thead
+    tbody
+    tr
+    th, td
+      padding: 20px 4px
+      border: 1px solid #000
+      width: 25%
+      text-align: center
+    th
+    td
+  .opening_special
+    margin: 40px 0
+    border: 1px solid #000
+    padding: 16px 24px
+    background: $bg2
+    h3
+      font-size: 22px
+      font-family: $midasi
+      line-height: 2
+    

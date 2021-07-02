@@ -47,7 +47,7 @@ block main
   section.campaign
     .inner
       h1 キャンペーン
-      .campaign_box
+      .campaign_wrap
         .campaign_left
           p サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
           .btn: a(href="#") 詳しく見る
@@ -57,14 +57,48 @@ block main
             img(src="./img/img_index_iruka1.png", alt="")
   section.opening
     .inner
-      h1 営業時間
-      table.opening_table
-        tbody
-          tr
-            th
-            td 平日一般料金
-            td 休日料金
-            td ナイトツアー
+      h1 営業時間/料金
+      .opening_wrap
+        .opening_left
+          h2 営業時間
+          p 平日10時～17時(最終入場16：30)
+            br
+            | （火曜日休館）
+          h2 ナイトツアー
+          p
+            | 4月から10月　19時30分～21時
+            br
+            | 11月から3月　18時30分～20時）
+        .opening_right
+          h2 料金
+
+          table.opening_table
+            thead
+              tr
+                th
+                td 平日一般料金
+                td 休日料金
+                td ナイトツアー
+            tbody
+              tr
+                th 大人
+                td 2,200円
+                td 2,400円
+                td 2,000円
+              tr
+                th 子ども
+                td 1,100円
+                td 1,200円
+                td 1,000円
+          .opening_special
+            h3 夏休み特別スペシャル！
+            p
+              | 7月1日～8月31日の期間中
+              br
+              | 小学生のナイトツアー料金が半額（500円）となります！
+              br
+              | 夜に輝くクラゲをみんなで見よう！
+
   section.appeal
     .inner
       h1 星駆水族館の魅力
