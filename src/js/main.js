@@ -1,5 +1,20 @@
 $(function () {
   AOS.init()
+
+  // gsap
+  var mvTL = gsap.timeline({
+    defaults: {
+      duration: .3,
+      ease: "Back.easeout"
+    }
+  })
+  var mvCatchMain = $(".mv_catch__main span")
+  var mvCatchSub = $(".mv_catch__sub span")
+  console.log(mvCatchMain[1]);
+  mvTL.to(mvCatchMain[0], { delay: 1, x: 0, y: 0, scale: 1 })
+    .to(mvCatchMain[1], { delay: 0.01, x: 0, y: 0, scale: 1 })
+    .to(mvCatchMain[2], { delay: 0.01, x: 0, y: 0, scale: 1 })
+    .to(mvCatchSub, { delay: 0.5, x: 0, y: 0, scale: 1, alpha: 1 })
 //   // スムーズスクロール（１）ページ遷移してスクロールのある場合
   
 //   // URLのハッシュ値を取得して、ハッシュ値があればページ内スクロールを1番上からする。

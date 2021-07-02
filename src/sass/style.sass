@@ -173,9 +173,9 @@ main
 .mv
   position: relative
   padding: 0
-  background: url("../img/mv.jpg") center top / cover
+  background: url("../img/mv.jpg") center bottom / cover
   min-height: 400px
-  height: 30vw
+  // height: 30vw
   img
     width: 100%
   .inner
@@ -187,9 +187,18 @@ main
     font-family: $midasi
     color: #fff
   .mv_catch__main
-    font-size: 56px
+    font-size: 42px
+    overflow: hidden
+    span
+      display: inline-block
+      transform: translate(-20px, 70px) scale(.7)
   .mv_catch__sub
     font-size: 22px
+    overflow: hidden
+    span
+      display: inline-block
+      transform: translateY(10px)
+      opacity: 0
 
 .oshirase
   padding-top: 40px
