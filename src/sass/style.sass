@@ -163,6 +163,7 @@ footer
 main
   display: block//IEバグ用
   overflow: hidden
+  background: url("../img/bg_main.png")
   section
     padding: 60px 0 100px
   h1
@@ -217,7 +218,21 @@ main
         width: 100%
 
 .campaign
-  background: #F1F8F8
+  background: #b6dfff
+  position: relative
+  padding-top: 70px
+  &::before, &::after
+    content: ""
+    position: absolute
+    bottom: 100%
+    left: 0px
+    width: 100%
+    height: 35px
+    background: url("../img/bg_wave.png") repeat-x top center / contain
+  &::after
+    top: 100%
+    transform: rotate(180deg)
+    // background-position: top left
   h1
     border-bottom: none
     text-align: center
