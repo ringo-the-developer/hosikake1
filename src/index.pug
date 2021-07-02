@@ -8,7 +8,17 @@ block prepend header
 block prepend footer
 block main
   section.mv
-    img(src="https://picsum.photos/id/218/1000/300", alt="")
+    //- img(src="./img/mv.jpg", alt="")
+    .inner
+      .mv_catch
+        .mv_catch__main
+          span イルカ！
+          span クラゲ！
+          span ジンベイザメ！
+        .mv_catch__sub
+          span とどく、ひろがる、心うごかす。
+
+
   section.oshirase
     .inner
       h1 お知らせ
@@ -47,6 +57,13 @@ block main
   section.opening
     .inner
       h1 営業時間
+      table.opening_table
+        tbody
+          tr
+            th
+            td 平日一般料金
+            td 休日料金
+            td ナイトツアー
   section.appeal
     .inner
       h1 星駆水族館の魅力

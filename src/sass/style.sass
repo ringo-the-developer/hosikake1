@@ -134,6 +134,8 @@ img
   .header_info
     display: flex
     justify-content: flex-end
+    font-size: 18px
+    font-weight: bold
   .tel
     margin-right: 1em
 
@@ -142,7 +144,10 @@ img
     ul
       display: flex
       a
-        margin-right: 1em
+        margin-left: 1em
+        &:hover
+          opacity: 1
+          text-decoration: underline
 
 footer
   background: $main
@@ -166,9 +171,26 @@ main
     font-family: $midasi
 
 .mv
+  position: relative
   padding: 0
+  background: url("../img/mv.jpg") center top / cover
+  min-height: 400px
+  height: 30vw
   img
     width: 100%
+  .inner
+    position: relative
+  .mv_catch
+    position: absolute
+    top: 40px
+    left: 0
+    font-family: $midasi
+    color: #fff
+  .mv_catch__main
+    font-size: 56px
+  .mv_catch__sub
+    font-size: 22px
+
 .oshirase
   padding-top: 40px
   h1
